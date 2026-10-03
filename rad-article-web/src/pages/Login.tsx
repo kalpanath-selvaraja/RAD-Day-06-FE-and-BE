@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {login} from "../servic/auth.ts";
+import type { AxiosResponse } from 'axios';
+import axios from 'axios'
 
 
 function Login() {
@@ -11,16 +13,17 @@ function Login() {
     const [password, setPassword] =   useState("");
 
     const handleLogin = async () => {
-        if(!email || password){
+        if(!email || !password){
             return alert("Please fill in all fields.");
         }
 
         try{
-            const res = await login(email, password)
+            const res  = await login(email, password)
 
-            const resData = res.data
-            const accessToken = resData.accessToken;
-            const refreshToken = resData.refreshToken;
+            const resData  = res.data
+
+            const accessToken = resData.access_token
+            const refreshToken = resData.refresh_token;
 
             if(accessToken && refreshToken){
                 localStorage.setItem("accessToken", accessToken);

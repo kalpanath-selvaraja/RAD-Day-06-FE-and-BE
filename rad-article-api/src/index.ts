@@ -2,7 +2,7 @@ import express, { type Request, type Response } from "express"
 import AuthRouter from "./routes/auth.routers"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
-import cors from "cors"
+import  cors from "cors"
 
 dotenv.config()
 
