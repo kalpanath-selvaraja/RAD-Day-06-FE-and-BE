@@ -6,7 +6,7 @@
 import {IUser} from "../models/user.model";
 import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
-dotenv.config()
+dotenv.config() // to preven this from been need we change the script  // "dev": "tsx watch src/index.ts"
 
 const  JWT_SECRET = process.env.JWT_SECRET as string
 const  JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET as string
@@ -30,6 +30,8 @@ export const signRefreshToken = (user:IUser):string => {
         {expiresIn: "7d"}
     )
 }
+
+
 
 
 

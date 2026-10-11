@@ -1,6 +1,28 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
+import { useEffect } from 'react'
 
 function Home() {
+
+  // const {user, loading} = useAuth()
+  const navigate = useNavigate()
+
+  // useEffect(() => {
+  //   if(!loading) {
+  //     if(!user){
+  //       navigate("/login")
+  //     }
+  //   }
+  // })
+
+  // if(!loading){
+  //   if(!user){
+  //     return <Navigate to={"/login"} replace />
+  //   }
+  // }
+
+
+
   return (
     <div className="min-h-screen bg-gray-50">
       <nav className="flex items-center justify-between bg-white px-6 py-4 shadow-sm">

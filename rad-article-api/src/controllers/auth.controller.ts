@@ -4,7 +4,9 @@ import bcrypt from "bcryptjs"
 import {signAccessToken, signRefreshToken} from "../utils/token";
 import {AuthRequest} from "../middleWares/auth";
 
+import jwt from "jsonwebtoken"
 
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET as string
 
 export const register = async (req: Request, res: Response) => {
   try {
@@ -37,6 +39,7 @@ export const register = async (req: Request, res: Response) => {
 }
 
 export const login = async (req: Request, res: Response) => {
+  
   try{
       const {email, password} = req.body
 
@@ -98,3 +101,44 @@ export const getMyDetails = async (req: AuthRequest, res: Response) => {
 }
 
 
+export const getRefreshToken  = async (req: Request ,res: Response) => {
+  const {refreshToken} = req.body
+
+  try{
+    
+
+    if (!refreshToken){
+      return res.status(400).json({
+        message: "Token is not found"
+      })
+    }
+
+  
+
+    const payload = jwt.verify(refreshToken, JWT_REFRESH_SECRET)
+    const userId = payload?.sub
+
+    const user = await UserModel.findById(userId)
+
+    if(!user){
+      return res.status(403).json({
+        message:"Invaild or Expired Token"
+      })
+    }  
+
+    const newAccessToken = signAccessToken(user)
+
+    res.status(200).json({
+      message: "ok",
+      data:{accessToken : newAccessToken}
+    })
+  
+
+  }catch(err){
+    res.status(400).json({
+      message: "Token is not found"
+    })
+  }
+    
+  
+}

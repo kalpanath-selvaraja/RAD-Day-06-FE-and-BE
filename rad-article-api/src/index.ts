@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-app.use(cors({ origin: "http://localhost:5173" }))
+app.use(cors({ origin: "http://localhost:5000" }))
 app.use(express.json())
 
 app.use("/api/v1/auth", AuthRouter)
@@ -25,4 +25,4 @@ mongoose
       console.log(`Server is running on http://localhost:${PORT}`)
     })
   })
-  .catch((err) => console.error("Fail to connect DB..!"))
+  .catch((err) => console.error("Fail to connect DB..!", err))

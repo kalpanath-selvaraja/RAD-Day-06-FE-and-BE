@@ -1,15 +1,12 @@
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home.tsx'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import AuthProvider from './context/AuthContext.tsx'
+import AppRouter from './router/index.tsx'
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-        </Routes>
+       <AuthProvider>
+        {/* Full Appication */}
+        <AppRouter />
+       </AuthProvider>
     )
 }
 

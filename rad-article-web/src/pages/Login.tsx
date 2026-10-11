@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {login} from "../servic/auth.ts";
-import type { AxiosResponse } from 'axios';
-import axios from 'axios'
+import {login} from "../service/auth.ts";
+
 
 
 function Login() {
@@ -29,7 +28,9 @@ function Login() {
                 localStorage.setItem("accessToken", accessToken);
                 localStorage.setItem("refreshToken", refreshToken);
 
-                navigate("/");
+                window.location.href = "/"
+
+                // navigate("/"); we Don't just navigate. Now refresh it because we want to access the AuthProvider to be rerendered
             }
         }catch(err){
             console.error(err)

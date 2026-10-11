@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d9c7202-d3f3-41f6-8bd4-8a74e68e8cdf" name="Changes" comment="" />
+    <list default="true" id="5d9c7202-d3f3-41f6-8bd4-8a74e68e8cdf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rad-article-api/src/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rad-article-api/src/controllers/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rad-article-api/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rad-article-api/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rad-article-web/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/rad-article-web/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rad-article-web/src/servic/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rad-article-web/src/servic/api.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3K94ozpTDBqRAByU8Q49b5r4qZN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false"
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\Kalpanath\\WebstormProjects\\RAD_Day_06_FrontEnd_and_Backend\\rad-article-api\\node_modules\\@typescript\\typescript-win32-x64\\lib"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5d9c7202-d3f3-41f6-8bd4-8a74e68e8cdf" name="Changes" comment="" />
@@ -27,7 +54,16 @@
       <option name="presentableId" value="Default" />
       <updated>1790956631209</updated>
       <workItem from="1790956631540" duration="2000" />
+      <workItem from="1791006953854" duration="4302000" />
+      <workItem from="1791031502654" duration="237000" />
+      <workItem from="1791249537735" duration="16000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>
